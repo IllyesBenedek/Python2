@@ -5,18 +5,17 @@ import random
 import json
 from unittest.mock import patch
 
-
-if not os.path.exists('python2.py'):
-    with open('task2.json') as json_data:
+if not os.path.exists('python1.py'):
+    with open('tasks.json', 'r', encoding='utf-8') as json_data:
         lista = json.load(json_data)
     
     random.shuffle(lista)
-    text = '\'\'\'\n\n\n\n#--------------------------\n\'\'\' '.join(lista)
+    text = "'''\n\n\n\n#--------------------------\n'''".join(lista)
     
-    with open('python2.py', 'w') as f:
-        f.write('#--------------------------\n\'\'\'')
+    with open('python1.py', 'w',encoding='utf-8') as f:
+        f.write("#--------------------------\n'''")
         f.writelines(text)
-        f.write('\'\'\'\n\n\n\n#=====================================')
+        f.write("'''\n\n\n\n#=====================================")
         
 from python2 import *
 
