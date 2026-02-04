@@ -192,3 +192,4 @@ def test_faktorialis():
     assert faktorialis(10) == 3628800
     assert faktorialis(-1) ==None # Negatív számot nem fogad el
 
+
