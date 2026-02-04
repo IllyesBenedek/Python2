@@ -7,7 +7,7 @@ from unittest.mock import patch
 
 pwd = os.getcwd()
 if not os.path.exists('python2.py'):
-    with open('task2.json', 'r', encoding='utf-8') as json_data:
+    with open('tasks.json', 'r', encoding='utf-8') as json_data:
         lista = json.load(json_data)
     
     random.shuffle(lista)
